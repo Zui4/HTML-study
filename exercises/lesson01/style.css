@@ -1,0 +1,37 @@
+body {
+  background-color: #2a4b71;
+}
+
+h1 {
+  color: white;
+  font-size: 28px;
+}
+h2 {
+  color: white;
+}
+p {
+  color: white;
+  font-size: 16px;
+}
+ul {
+  color: white;
+}
+ol {
+  color: white;
+}
+a {
+  color: white;
+}
+.box {
+  background-color: #a590af;
+  color: white;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+.card {
+  border: 5px solid#E43F3B;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 16px;
+  width: 700px;
+}
