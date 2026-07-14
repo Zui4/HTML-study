@@ -193,6 +193,46 @@ Grid .row {
      .footer に text-align: center, padding, background-color を設定
      color, font-size を設定
    ============================================= */
+
+/* ===== Contact Form ===== */
+.section form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.section form div {
+  margin-bottom: 15px;
+}
+
+.section form input,
+.section form select,
+.section form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.section form textarea {
+  resize: vertical;
+}
+
+.section form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4da3ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section form button:hover {
+  background-color: #2f7fd3;
+}
+
 .about p {
   background-image: url(img/about.jpg);
 }

@@ -48,11 +48,11 @@
       <div class="member-list">
         <div class="member">
           <img src="img/member/nobu.webp" alt="メンバー1" />
-          <p>金森伸揮</p>
+          <p>金森直哉</p>
         </div>
         <div class="member">
           <img src="img/member/naoya.webp" alt="メンバー2" />
-          <p>禪院直哉</p>
+          <p>禪院申揮</p>
         </div>
         <div class="member">
           <img src="img/member/pikaso.jpg" alt="メンバー3" />
@@ -132,30 +132,46 @@
        - <h2>CONTACT</h2>
        - <p> でメールアドレスなどの連絡先を書く
        ============================================ -->
-        <div class="section">
-        <h2>CONTACT FORM</h2>
-
-      <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>テキストフィールドの例</title>
-      </head>
-
-     <body>
-      <input type="text" placeholder="name" size="30">
-      </body>
       
-      <div>
-      <input type="text" placeholder="mail" size="30">
-      </div>
 
-       <div>
-      <input type="text" placeholder="message" size="30">
-      </div>
 
+    <title>Contact Form</title>
+</head>
+
+<body>
+
+<div class="section">
+    <h2>CONTACT FORM</h2>
+
+    <form>
+        <div>
+            <input type="text" placeholder="Name" size="30">
         </div>
 
+        <div>
+            <input type="email" placeholder="Mail" size="30">
+        </div>
 
+       
+        <div>
+            <select name="gender">
+                <option value="male">男</option>
+                <option value="female">女</option>
+                <option value="other">その他</option>
+            </select>
+        </div>
+        <div>
+            <textarea placeholder="Message" cols="30" rows="5"></textarea>
+        </div>
+
+        <button id="submit" type="submit">Send</button>
+    </form>
+
+</div>
+<script>
+   alert('内容が入力されていません');
+  </script>
+</body>
 
 
 
