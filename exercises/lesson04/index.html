@@ -167,12 +167,18 @@
         <button id="submit" type="submit">Send</button>
     </form>
 
-</div>
 <script>
-   alert('内容が入力されていません');
-  </script>
-</body>
+document.querySelector("form").addEventListener("submit", function(e) {
+    const name = document.querySelector('input[type="text"]').value.trim();
+    const mail = document.querySelector('input[type="email"]').value.trim();
+    const message = document.querySelector("textarea").value.trim();
 
+    if (name === "" || mail === "" || message === "") {
+        e.preventDefault(); // フォーム送信を止める
+        alert("内容が入力されていません");
+    }
+});
+</script>
 
 
       <div class="section">
