@@ -173,11 +173,28 @@ document.querySelector("form").addEventListener("submit", function(e) {
     const mail = document.querySelector('input[type="email"]').value.trim();
     const message = document.querySelector("textarea").value.trim();
 
-    if (name === "" || mail === "" || message === "") {
-        e.preventDefault(); // フォーム送信を止める
-        alert("内容が入力されていません");
+    let errors = [];
+
+    if (name === "") {
+        errors.push("名前が入力されていません");
+    }
+    var pattern = /^[a-z\d][\w.-]*@[\w.-]+\.[a-z\d]+$/i
+    var postcode = 'guidagen17@gmail.com'; 
+    var result = postcode.match(pattern);
+    if (mail === "") {
+        errors.push("メールアドレスが入力されていません");
+    }
+
+    if (message === "") {
+        errors.push("メッセージが入力されていません");
+    }
+
+    if (errors.length > 0) {
+        e.preventDefault();
+        alert(errors.join("\n"));
     }
 });
+
 </script>
 
 
