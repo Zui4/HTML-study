@@ -145,11 +145,11 @@
 
     <form>
         <div>
-            <input type="text" placeholder="Name" size="30">
+            <input id="name" type="text" placeholder="Name" size="30">
         </div>
 
         <div>
-            <input type="email" placeholder="Mail" size="30">
+            <input id="mail" type="text" placeholder="Mail" size="30">
         </div>
 
        
@@ -161,39 +161,43 @@
             </select>
         </div>
         <div>
-            <textarea placeholder="Message" cols="30" rows="5"></textarea>
+            <textarea id="message"  placeholder="Message" cols="30" rows="5"></textarea>
         </div>
 
-        <button id="submit" type="submit">Send</button>
+        <input id="submit" type="button" value="送信" onclick="test()">
     </form>
 
 <script>
-document.querySelector("form").addEventListener("submit", function(e) {
-    const name = document.querySelector('input[type="text"]').value.trim();
-    const mail = document.querySelector('input[type="email"]').value.trim();
-    const message = document.querySelector("textarea").value.trim();
+  function test() {
+    const name = document.getElementById("name");
+    const mail = document.getElementById("mail");
+    const message = document.getElementById("message");
 
     let errors = [];
 
-    if (name === "") {
+    if (name.value == "") {
         errors.push("名前が入力されていません");
     }
-    var pattern = /^[a-z\d][\w.-]*@[\w.-]+\.[a-z\d]+$/i
-    var postcode = 'guidagen17@gmail.com'; 
-    var result = postcode.match(pattern);
-    if (mail === "") {
+    
+    if (mail.value == "") {
+      var pattern = /^[a-z\d][\w.-]*@[\w.-]+\.[a-z\d]+$/i
+      var postcode = document.getElementById("message"); 
+      var result = postcode.match(pattern);
+
         errors.push("メールアドレスが入力されていません");
     }
 
-    if (message === "") {
-        errors.push("メッセージが入力されていません");
+    if (message.value == "") {
+        errors.push("要件が入力されていません");
     }
 
+   
+
     if (errors.length > 0) {
-        e.preventDefault();
         alert(errors.join("\n"));
     }
-});
+  }
+
 
 </script>
 
